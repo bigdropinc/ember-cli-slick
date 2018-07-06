@@ -43,6 +43,7 @@ export default Ember.Component.extend({
   vertical: false,
   verticalSwiping: false,
   rtl: false,
+  dotsTitles: [],
 
   _initializeSlick: Ember.on('didInsertElement', function() {
     var _this = this;
@@ -94,6 +95,7 @@ export default Ember.Component.extend({
       variableWidth    : this.get('variableWidth'),
       vertical         : this.get('vertical'),
       verticalSwiping  : this.get('verticalSwiping'),
+      dotsTitles       : this.get('dotsTitles'),
       rtl              : this.get('rtl')
     })
     .on('afterChange', function ($event, slick, currentSlide) {
